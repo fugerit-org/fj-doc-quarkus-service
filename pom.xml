@@ -23,6 +23,7 @@
     <quarkus.platform.version>3.8.1</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.2.5</surefire-plugin.version>
+    <fj-service-helper-version>0.3.1</fj-service-helper-version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -30,6 +31,13 @@
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>${quarkus.platform.artifact-id}</artifactId>
         <version>${quarkus.platform.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.fugerit.java</groupId>
+        <artifactId>fj-service-helper-bom</artifactId>
+        <version>${fj-service-helper-version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
